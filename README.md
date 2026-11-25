@@ -1,10 +1,10 @@
 # Console Banking System in Java
 
-The program can make transactions and withdraws, show the history of transactions and show the actual balance of your
+The program can make transactions and withdraws, show the history of transactions and show the current balance of your
 account. The objective of the program, is to practice OOP, Java good practices and automated tests;
 
 ## Features
-- Consult actual balance in your account
+- Consult current balance in your account
 - Make deposits, that are saved in your account
 - Withdraw the money that got deposited
 - See the history of transactions made using the program
@@ -22,7 +22,7 @@ using "java.nio.file"
 ## Project Structure
 - `Main.java`: The "Main.java", has the responsability to collect user input and be the interface of the project
 - `Account.java`: Is responsible for receiving the inputs and process the data in private to retrieve to "Main.java"
-- `Transaction`: Save the transaction information made in "Account.java" and formats in a readable way, to be stored
+- `Transaction.java`: Save the transaction information made in "Account.java" and formats in a readable way, to be stored
 later in "AccountStorage.java"
 - `AccountStorage.java`: Creates the storage file "transactions.csv" and read it back, whenever the program executes
 - `InsufficientBalanceException.java`: Throws an error message, whenever the amount that is withdrawn is more than the
