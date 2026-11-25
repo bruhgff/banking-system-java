@@ -1,0 +1,38 @@
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public class Transaction {
+    private String type;
+    private BigDecimal amount;
+    private LocalDateTime timestamp;
+
+    public Transaction(String type, BigDecimal amount) {
+        this.type = type;
+        this.amount = amount;
+        this.timestamp = LocalDateTime.now();
+    }
+    public Transaction(String type, BigDecimal amount, LocalDateTime timestamp) {
+        this.type = type;
+        this.amount = amount;
+        this.timestamp = timestamp;
+    }
+
+    public String getType() {
+        return type;
+    }
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    @Override
+    public String toString() {
+        return timestamp + " | " + type + " | $" + String.format("%.2f", amount);
+    }
+
+    public String toCSV() {
+        return timestamp + "," + type + "," + amount;
+    }
+
+
+
+}
